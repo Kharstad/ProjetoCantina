@@ -37,12 +37,11 @@ create table pedido_has_guaravita (
 
 
 insert into salgado (id_salgado,nome,preco,qntd_disp)
-values (1, default, default, default),
-(2,'Coxinha',350,460),
-(3,'Joelho',350,460),
-(4,'Kibe',350,460),
-(5,'Pão de Queijo',350,460),
-(6,'Enroladinho de Salsicha',350,460);
+values (1,'Coxinha',350,460),
+(2,'Joelho',350,460),
+(3,'Kibe',350,460),
+(4,'Pão de Queijo',350,460),
+(5,'Enroladinho de Salsicha',350,460);
 
 insert into guaravita (id_guaravita,nome,preco,qntd_disp)
 values (1,'Guaracamp',150,1150),
