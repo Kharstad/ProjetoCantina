@@ -31,6 +31,12 @@ public class EstoqueLancho extends javax.swing.JFrame {
         ltotal.setVisible(false);
         confirm.setVisible(false);
         reset.setVisible(false);
+        salgGuara.setVisible(false);
+        alter1.setVisible(false);
+        qsalgesto.setVisible(false);
+        qguaesto.setVisible(false);
+        guaesto.setVisible(false);
+        salgesto.setVisible(false);
     }
 
     /**
@@ -78,6 +84,12 @@ public class EstoqueLancho extends javax.swing.JFrame {
         ltotal = new javax.swing.JTextField();
         confirm = new javax.swing.JButton();
         reset = new javax.swing.JButton();
+        salgGuara = new javax.swing.JButton();
+        salgesto = new javax.swing.JLabel();
+        qsalgesto = new javax.swing.JTextField();
+        guaesto = new javax.swing.JLabel();
+        qguaesto = new javax.swing.JTextField();
+        alter1 = new javax.swing.JButton();
         fundotirth = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -248,7 +260,7 @@ public class EstoqueLancho extends javax.swing.JFrame {
                 rsalgActionPerformed(evt);
             }
         });
-        tirth.add(rsalg, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, -1, -1));
+        tirth.add(rsalg, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 160, -1));
 
         rguaravitas.setText("Registrar guaravita");
         rguaravitas.addActionListener(new java.awt.event.ActionListener() {
@@ -256,39 +268,45 @@ public class EstoqueLancho extends javax.swing.JFrame {
                 rguaravitasActionPerformed(evt);
             }
         });
-        tirth.add(rguaravitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 280, -1, -1));
+        tirth.add(rguaravitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 160, -1));
 
         txt6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txt6.setForeground(new java.awt.Color(255, 255, 255));
         txt6.setText("Valor da venda");
-        tirth.add(txt6, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 60, -1, 20));
+        tirth.add(txt6, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 60, -1, 20));
 
         txtValor.setEditable(false);
         txtValor.setText("0");
-        tirth.add(txtValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 90, 40, -1));
+        tirth.add(txtValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 110, 40, -1));
 
         add1.setText("R$");
-        tirth.add(add1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 90, 20, -1));
+        tirth.add(add1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 110, 20, -1));
 
         dcliente.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         dcliente.setForeground(new java.awt.Color(255, 255, 255));
         dcliente.setText("pagamento do cliente");
-        tirth.add(dcliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 180, -1, -1));
-        tirth.add(pagamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 220, 60, -1));
+        tirth.add(dcliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, -1, -1));
+
+        pagamento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pagamentoActionPerformed(evt);
+            }
+        });
+        tirth.add(pagamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 290, 60, -1));
 
         txt7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txt7.setForeground(new java.awt.Color(255, 255, 255));
         txt7.setText("Troco");
-        tirth.add(txt7, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, -1, -1));
+        tirth.add(txt7, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 340, -1, -1));
 
         troco.setEditable(false);
         troco.setText("0");
-        tirth.add(troco, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 340, 60, -1));
+        tirth.add(troco, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 370, 60, -1));
 
         txt8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txt8.setForeground(new java.awt.Color(255, 255, 255));
         txt8.setText("Lucro total");
-        tirth.add(txt8, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, -1, -1));
+        tirth.add(txt8, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 270, -1, 20));
 
         ltotal.setEditable(false);
         ltotal.setText("0");
@@ -297,7 +315,7 @@ public class EstoqueLancho extends javax.swing.JFrame {
                 ltotalActionPerformed(evt);
             }
         });
-        tirth.add(ltotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, 70, -1));
+        tirth.add(ltotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 300, 70, -1));
 
         confirm.setText("Confirmar compra");
         confirm.addActionListener(new java.awt.event.ActionListener() {
@@ -305,7 +323,7 @@ public class EstoqueLancho extends javax.swing.JFrame {
                 confirmActionPerformed(evt);
             }
         });
-        tirth.add(confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 420, -1, -1));
+        tirth.add(confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 160, -1));
 
         reset.setText("resetar");
         reset.addActionListener(new java.awt.event.ActionListener() {
@@ -313,7 +331,39 @@ public class EstoqueLancho extends javax.swing.JFrame {
                 resetActionPerformed(evt);
             }
         });
-        tirth.add(reset, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, -1, -1));
+        tirth.add(reset, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, 160, -1));
+
+        salgGuara.setText("Salgado e guaravita");
+        salgGuara.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salgGuaraActionPerformed(evt);
+            }
+        });
+        tirth.add(salgGuara, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 160, -1));
+
+        salgesto.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        salgesto.setForeground(new java.awt.Color(255, 255, 255));
+        salgesto.setText("Salgados em estoque");
+        tirth.add(salgesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, -1, -1));
+
+        qsalgesto.setEditable(false);
+        tirth.add(qsalgesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 70, 70, -1));
+
+        guaesto.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        guaesto.setForeground(new java.awt.Color(255, 255, 255));
+        guaesto.setText("Guaravitas em estoque");
+        tirth.add(guaesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 120, -1, -1));
+
+        qguaesto.setEditable(false);
+        tirth.add(qguaesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 150, 70, -1));
+
+        alter1.setText("Alterar quantidades em estoque");
+        alter1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                alter1ActionPerformed(evt);
+            }
+        });
+        tirth.add(alter1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 410, -1, -1));
 
         fundotirth.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/salgados.jpg"))); // NOI18N
         tirth.add(fundotirth, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 480));
@@ -329,7 +379,7 @@ public class EstoqueLancho extends javax.swing.JFrame {
 
     private void salgVendiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salgVendiActionPerformed
         // TODO add your handling code here:
-        double QS = new Double(quantSalg.getText());
+        
     }//GEN-LAST:event_salgVendiActionPerformed
 
     private void guaraVendiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guaraVendiActionPerformed
@@ -353,7 +403,9 @@ public class EstoqueLancho extends javax.swing.JFrame {
          int l = SV + GV * 5;
          quantlucro.setText(Integer.toString(l));
          
-        
+        qsalgesto.setText(Integer.toString(QS));
+        qguaesto.setText(Integer.toString(QR));
+         
         fundo.setVisible(false);
         txt1.setVisible(false);
         txt2.setVisible(false);
@@ -378,6 +430,7 @@ public class EstoqueLancho extends javax.swing.JFrame {
         ltotal.setVisible(false);  
         tirth.setVisible(false);
         reset.setVisible(false);
+        salgGuara.setVisible(false);
         fundotirth.setVisible(false);
         second.setVisible(true);
         txt5.setVisible(true);
@@ -444,7 +497,13 @@ public class EstoqueLancho extends javax.swing.JFrame {
         tirth.setVisible(true);
         fundotirth.setVisible(true);
         confirm.setVisible(true);
+        salgGuara.setVisible(true);
         reset.setVisible(true);
+        alter1.setVisible(true);
+        qsalgesto.setVisible(true);
+        qguaesto.setVisible(true);
+        guaesto.setVisible(true);
+        salgesto.setVisible(true);
         fundo.setVisible(false);
         txt1.setVisible(false);
         txt2.setVisible(false);
@@ -533,7 +592,15 @@ public class EstoqueLancho extends javax.swing.JFrame {
         double g = Double.parseDouble(paga);
        
         double f = g - c;
-        troco.setText(Double.toString(f));     
+        troco.setText(Double.toString(f));    
+        
+         int k = Integer.parseInt(qsalgesto.getText().toString());
+         int p = k - 1;
+         qsalgesto.setText(Integer.toString(p));
+         
+         int y = Integer.parseInt(qguaesto.getText().toString());
+         int u = y - 1;
+         qguaesto.setText(Integer.toString(u));
     }//GEN-LAST:event_confirmActionPerformed
 
     private void ltotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ltotalActionPerformed
@@ -547,6 +614,35 @@ public class EstoqueLancho extends javax.swing.JFrame {
         troco.setText("0");
         
     }//GEN-LAST:event_resetActionPerformed
+
+    private void salgGuaraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salgGuaraActionPerformed
+        // TODO add your handling code here:
+        int z = Integer.parseInt(txtValor.getText());
+        int x = z + 5;
+        txtValor.setText(Integer.toString(x));
+    }//GEN-LAST:event_salgGuaraActionPerformed
+
+    private void pagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pagamentoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pagamentoActionPerformed
+
+    private void alter1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alter1ActionPerformed
+        fundo.setVisible(true);
+        txt1.setVisible(true);
+        txt2.setVisible(true);
+        txt3.setVisible(true);
+        txt4.setVisible(true);
+        quantSalg.setVisible(true);
+        quantRefres.setVisible(true);
+        guaraVendi.setVisible(false);
+        salgVendi.setVisible(false);
+        btnlimpar.setVisible(true);
+        btn.setVisible(true);
+        second.setVisible(false);
+        txt5.setVisible(false);
+        vendedor.setVisible(false);
+        alter.setVisible(false);
+    }//GEN-LAST:event_alter1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -587,6 +683,7 @@ public class EstoqueLancho extends javax.swing.JFrame {
     private javax.swing.JTextField add;
     private javax.swing.JTextField add1;
     private javax.swing.JButton alter;
+    private javax.swing.JButton alter1;
     private javax.swing.JButton btn;
     private javax.swing.JButton btnlimpar;
     private javax.swing.JButton confirm;
@@ -594,20 +691,25 @@ public class EstoqueLancho extends javax.swing.JFrame {
     private javax.swing.JLabel fundo;
     private javax.swing.JLabel fundosecond;
     private javax.swing.JLabel fundotirth;
+    private javax.swing.JLabel guaesto;
     private javax.swing.JTextField guaraVendi;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField ltotal;
     private javax.swing.JLabel lucro;
     private javax.swing.JTextField pagamento;
     private javax.swing.JTextField qg1;
+    private javax.swing.JTextField qguaesto;
     private javax.swing.JTextField qs1;
+    private javax.swing.JTextField qsalgesto;
     private javax.swing.JTextField quantRefres;
     private javax.swing.JTextField quantSalg;
     private javax.swing.JTextField quantlucro;
     private javax.swing.JButton reset;
     private javax.swing.JButton rguaravitas;
     private javax.swing.JButton rsalg;
+    private javax.swing.JButton salgGuara;
     private javax.swing.JTextField salgVendi;
+    private javax.swing.JLabel salgesto;
     private javax.swing.JPanel second;
     private javax.swing.JPanel tirth;
     private javax.swing.JTextField troco;
