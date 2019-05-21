@@ -101,7 +101,7 @@ public class EstoqueLancho extends javax.swing.JFrame {
         txt1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         txt1.setForeground(new java.awt.Color(255, 255, 255));
         txt1.setText("Quantidade disponivel de salgados");
-        getContentPane().add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, 290, 50));
+        getContentPane().add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 290, 50));
 
         quantSalg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,13 +113,13 @@ public class EstoqueLancho extends javax.swing.JFrame {
                 quantSalgKeyTyped(evt);
             }
         });
-        getContentPane().add(quantSalg, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 80, 30));
+        getContentPane().add(quantSalg, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, 80, 30));
 
         txt2.setBackground(new java.awt.Color(51, 51, 51));
         txt2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         txt2.setForeground(new java.awt.Color(255, 255, 255));
         txt2.setText("Quantidade de salgados vendidos");
-        getContentPane().add(txt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 280, -1));
+        getContentPane().add(txt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, 280, -1));
 
         salgVendi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,12 +131,12 @@ public class EstoqueLancho extends javax.swing.JFrame {
                 salgVendiKeyTyped(evt);
             }
         });
-        getContentPane().add(salgVendi, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 80, 30));
+        getContentPane().add(salgVendi, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 190, 80, 30));
 
         txt3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txt3.setForeground(new java.awt.Color(255, 255, 255));
         txt3.setText("Quantidade disponivel de guaravitas");
-        getContentPane().add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, -1, -1));
+        getContentPane().add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, -1, -1));
 
         quantRefres.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,12 +148,13 @@ public class EstoqueLancho extends javax.swing.JFrame {
                 quantRefresKeyTyped(evt);
             }
         });
-        getContentPane().add(quantRefres, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 80, 30));
+        getContentPane().add(quantRefres, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 260, 80, 30));
 
+        txt4.setBackground(new java.awt.Color(0, 0, 0));
         txt4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txt4.setForeground(new java.awt.Color(255, 255, 255));
         txt4.setText("Quantidade de guaravitas vendidos");
-        getContentPane().add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, -1, -1));
+        getContentPane().add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, -1, -1));
 
         guaraVendi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -165,7 +166,7 @@ public class EstoqueLancho extends javax.swing.JFrame {
                 guaraVendiKeyTyped(evt);
             }
         });
-        getContentPane().add(guaraVendi, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 460, 80, 30));
+        getContentPane().add(guaraVendi, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, 80, 30));
 
         btn.setText("Cadastrar");
         btn.addActionListener(new java.awt.event.ActionListener() {
@@ -173,7 +174,7 @@ public class EstoqueLancho extends javax.swing.JFrame {
                 btnActionPerformed(evt);
             }
         });
-        getContentPane().add(btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 460, -1, -1));
+        getContentPane().add(btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 430, -1, -1));
 
         btnlimpar.setText("Limpar");
         btnlimpar.addActionListener(new java.awt.event.ActionListener() {
@@ -181,29 +182,29 @@ public class EstoqueLancho extends javax.swing.JFrame {
                 btnlimparActionPerformed(evt);
             }
         });
-        getContentPane().add(btnlimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 460, 80, -1));
+        getContentPane().add(btnlimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 430, 80, -1));
 
         qs1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 qs1ActionPerformed(evt);
             }
         });
-        getContentPane().add(qs1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 290, 60, -1));
+        getContentPane().add(qs1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 230, 60, -1));
 
         qg1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 qg1ActionPerformed(evt);
             }
         });
-        getContentPane().add(qg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 360, 60, -1));
+        getContentPane().add(qg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 320, 60, -1));
 
         lucro.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lucro.setForeground(new java.awt.Color(255, 255, 255));
         lucro.setText("Lucro medio");
-        getContentPane().add(lucro, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 160, -1, -1));
+        getContentPane().add(lucro, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 90, -1, -1));
 
         quantlucro.setEditable(false);
-        getContentPane().add(quantlucro, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 200, 50, -1));
+        getContentPane().add(quantlucro, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 130, 50, -1));
 
         add.setEditable(false);
         add.setText("R$");
@@ -212,7 +213,7 @@ public class EstoqueLancho extends javax.swing.JFrame {
                 addActionPerformed(evt);
             }
         });
-        getContentPane().add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 200, 20, -1));
+        getContentPane().add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 130, 20, -1));
 
         fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/salgados.jpg"))); // NOI18N
         fundo.setText("jLabel1");
@@ -223,12 +224,12 @@ public class EstoqueLancho extends javax.swing.JFrame {
         txt5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txt5.setForeground(new java.awt.Color(255, 255, 255));
         txt5.setText("Quantidade atual de salgados");
-        second.add(txt5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 170, -1, -1));
+        second.add(txt5, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 120, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Quantidade atual de guavitas");
-        second.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 250, -1, -1));
+        second.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 210, -1, -1));
 
         alter.setText("alterar quantidades");
         alter.addActionListener(new java.awt.event.ActionListener() {
@@ -347,6 +348,11 @@ public class EstoqueLancho extends javax.swing.JFrame {
         tirth.add(salgesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, -1, -1));
 
         qsalgesto.setEditable(false);
+        qsalgesto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                qsalgestoActionPerformed(evt);
+            }
+        });
         tirth.add(qsalgesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 70, 70, -1));
 
         guaesto.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -436,6 +442,7 @@ public class EstoqueLancho extends javax.swing.JFrame {
         txt5.setVisible(true);
         vendedor.setVisible(true);
         alter.setVisible(true);
+        alter1.setVisible(false);
         
     }//GEN-LAST:event_btnActionPerformed
 
@@ -499,7 +506,7 @@ public class EstoqueLancho extends javax.swing.JFrame {
         confirm.setVisible(true);
         salgGuara.setVisible(true);
         reset.setVisible(true);
-        alter1.setVisible(true);
+        alter1.setVisible(false);
         qsalgesto.setVisible(true);
         qguaesto.setVisible(true);
         guaesto.setVisible(true);
@@ -524,6 +531,7 @@ public class EstoqueLancho extends javax.swing.JFrame {
         lucro.setVisible(false);
         quantlucro.setVisible(false);  
         add.setVisible(false);
+        
     }//GEN-LAST:event_vendedorActionPerformed
 
     private void qs1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qs1ActionPerformed
@@ -567,6 +575,12 @@ public class EstoqueLancho extends javax.swing.JFrame {
         int a = Integer.parseInt(txtValor.getText());
         int p = a + 3;
         txtValor.setText(Integer.toString(p));
+        int t = Integer.parseInt(qsalgesto.getText());
+        int c = t - 1;
+        qsalgesto.setText(Integer.toString(c));
+        if( c ==0){
+        alter1.setVisible(true);
+}      
     }//GEN-LAST:event_rsalgActionPerformed
 
     private void rguaravitasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rguaravitasActionPerformed
@@ -574,6 +588,13 @@ public class EstoqueLancho extends javax.swing.JFrame {
         int b = Integer.parseInt(txtValor.getText());
         int s = b + 2;
         txtValor.setText(Integer.toString(s));
+        int j = Integer.parseInt(qguaesto.getText());
+        int u = j - 1;
+        qguaesto.setText(Integer.toString(u));
+        if( u == 0){
+        alter1.setVisible(true);
+}      
+
     }//GEN-LAST:event_rguaravitasActionPerformed
 
     private void confirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmActionPerformed
@@ -620,6 +641,15 @@ public class EstoqueLancho extends javax.swing.JFrame {
         int z = Integer.parseInt(txtValor.getText());
         int x = z + 5;
         txtValor.setText(Integer.toString(x));
+        int j = Integer.parseInt(qguaesto.getText());
+        int t = Integer.parseInt(qsalgesto.getText());
+        int i = t - 1;
+        int k = j - 1;
+        qsalgesto.setText(Integer.toString(i));
+        qguaesto.setText(Integer.toString(k));
+        if( i == 0 || k == 0){
+        alter1.setVisible(true);
+}
     }//GEN-LAST:event_salgGuaraActionPerformed
 
     private void pagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pagamentoActionPerformed
@@ -642,7 +672,14 @@ public class EstoqueLancho extends javax.swing.JFrame {
         txt5.setVisible(false);
         vendedor.setVisible(false);
         alter.setVisible(false);
+        txt2.setVisible(false);
+        txt4.setVisible(false);
+        alter1.setVisible(false);
     }//GEN-LAST:event_alter1ActionPerformed
+
+    private void qsalgestoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qsalgestoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_qsalgestoActionPerformed
 
     /**
      * @param args the command line arguments
