@@ -23,7 +23,7 @@ public class EstoqueLancho extends javax.swing.JFrame {
         txt6.setVisible(false);
         txtValor.setVisible(false);
         add1.setVisible(false);
-        dcliente.setVisible(false);        
+        dcliente.setVisible(false);
         pagamento.setVisible(false);
         txt7.setVisible(false);
         troco.setVisible(false);
@@ -302,6 +302,11 @@ public class EstoqueLancho extends javax.swing.JFrame {
 
         troco.setEditable(false);
         troco.setText("0");
+        troco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                trocoActionPerformed(evt);
+            }
+        });
         tirth.add(troco, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 370, 60, -1));
 
         txt8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -385,7 +390,7 @@ public class EstoqueLancho extends javax.swing.JFrame {
 
     private void salgVendiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salgVendiActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_salgVendiActionPerformed
 
     private void guaraVendiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guaraVendiActionPerformed
@@ -394,24 +399,24 @@ public class EstoqueLancho extends javax.swing.JFrame {
 
     private void btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActionPerformed
         // TODO add your handling code here:
-   
-         int QS = Integer.parseInt(quantSalg.getText().toString());
-         int SV = Integer.parseInt(salgVendi.getText().toString());
-         int QR = Integer.parseInt(quantRefres.getText().toString());
-         int GV = Integer.parseInt(guaraVendi.getText().toString());
-         
-         int Q = QS - SV;
-         qs1.setText(Integer.toString(Q));
-         
-         int R = QR - GV;
-         qg1.setText(Integer.toString(R));
-         
-         int l = SV + GV * 5;
-         quantlucro.setText(Integer.toString(l));
-         
+
+        int QS = Integer.parseInt(quantSalg.getText().toString());
+        int SV = Integer.parseInt(salgVendi.getText().toString());
+        int QR = Integer.parseInt(quantRefres.getText().toString());
+        int GV = Integer.parseInt(guaraVendi.getText().toString());
+
+        int Q = QS - SV;
+        qs1.setText(Integer.toString(Q));
+
+        int R = QR - GV;
+        qg1.setText(Integer.toString(R));
+
+        int l = SV + GV * 5;
+        quantlucro.setText(Integer.toString(l));
+
         qsalgesto.setText(Integer.toString(QS));
         qguaesto.setText(Integer.toString(QR));
-         
+
         fundo.setVisible(false);
         txt1.setVisible(false);
         txt2.setVisible(false);
@@ -423,17 +428,17 @@ public class EstoqueLancho extends javax.swing.JFrame {
         salgVendi.setVisible(false);
         btnlimpar.setVisible(false);
         btn.setVisible(false);
-         rsalg.setVisible(false);
+        rsalg.setVisible(false);
         rguaravitas.setVisible(false);
         txt6.setVisible(false);
         txtValor.setVisible(false);
         add1.setVisible(false);
-        dcliente.setVisible(false);        
+        dcliente.setVisible(false);
         pagamento.setVisible(false);
         txt7.setVisible(false);
         troco.setVisible(false);
         txt8.setVisible(false);
-        ltotal.setVisible(false);  
+        ltotal.setVisible(false);
         tirth.setVisible(false);
         reset.setVisible(false);
         salgGuara.setVisible(false);
@@ -443,7 +448,7 @@ public class EstoqueLancho extends javax.swing.JFrame {
         vendedor.setVisible(true);
         alter.setVisible(true);
         alter1.setVisible(false);
-        
+
     }//GEN-LAST:event_btnActionPerformed
 
     private void btnlimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlimparActionPerformed
@@ -455,32 +460,32 @@ public class EstoqueLancho extends javax.swing.JFrame {
 
     private void quantSalgKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_quantSalgKeyTyped
         // TODO add your handling code here:
-         String caracteres="0987654321";
-            if(!caracteres.contains(evt.getKeyChar()+"")){
+        String caracteres = "0987654321";
+        if (!caracteres.contains(evt.getKeyChar() + "")) {
             evt.consume();
         }
     }//GEN-LAST:event_quantSalgKeyTyped
 
     private void salgVendiKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_salgVendiKeyTyped
         // TODO add your handling code here:
-         String caracteres="0987654321";
-            if(!caracteres.contains(evt.getKeyChar()+"")){
+        String caracteres = "0987654321";
+        if (!caracteres.contains(evt.getKeyChar() + "")) {
             evt.consume();
         }
     }//GEN-LAST:event_salgVendiKeyTyped
 
     private void quantRefresKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_quantRefresKeyTyped
         // TODO add your handling code here:
-         String caracteres="0987654321";
-            if(!caracteres.contains(evt.getKeyChar()+"")){
+        String caracteres = "0987654321";
+        if (!caracteres.contains(evt.getKeyChar() + "")) {
             evt.consume();
         }
     }//GEN-LAST:event_quantRefresKeyTyped
 
     private void guaraVendiKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_guaraVendiKeyTyped
         // TODO add your handling code here:
-         String caracteres="0987654321";
-            if(!caracteres.contains(evt.getKeyChar()+"")){
+        String caracteres = "0987654321";
+        if (!caracteres.contains(evt.getKeyChar() + "")) {
             evt.consume();
         }
     }//GEN-LAST:event_guaraVendiKeyTyped
@@ -495,12 +500,12 @@ public class EstoqueLancho extends javax.swing.JFrame {
         txt6.setVisible(true);
         txtValor.setVisible(true);
         add1.setVisible(true);
-        dcliente.setVisible(true);        
+        dcliente.setVisible(true);
         pagamento.setVisible(true);
         txt7.setVisible(true);
         troco.setVisible(true);
         txt8.setVisible(true);
-        ltotal.setVisible(true);  
+        ltotal.setVisible(true);
         tirth.setVisible(true);
         fundotirth.setVisible(true);
         confirm.setVisible(true);
@@ -529,9 +534,9 @@ public class EstoqueLancho extends javax.swing.JFrame {
         qs1.setVisible(false);
         qg1.setVisible(false);
         lucro.setVisible(false);
-        quantlucro.setVisible(false);  
+        quantlucro.setVisible(false);
         add.setVisible(false);
-        
+
     }//GEN-LAST:event_vendedorActionPerformed
 
     private void qs1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qs1ActionPerformed
@@ -563,11 +568,11 @@ public class EstoqueLancho extends javax.swing.JFrame {
         txt5.setVisible(false);
         vendedor.setVisible(false);
         alter.setVisible(false);
-        
+
         quantlucro.setText("");
         qs1.setText("");
         qg1.setText("");
-        
+
     }//GEN-LAST:event_alterActionPerformed
 
     private void rsalgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rsalgActionPerformed
@@ -578,9 +583,9 @@ public class EstoqueLancho extends javax.swing.JFrame {
         int t = Integer.parseInt(qsalgesto.getText());
         int c = t - 1;
         qsalgesto.setText(Integer.toString(c));
-        if( c ==0){
-        alter1.setVisible(true);
-}      
+        if (c == 0) {
+            alter1.setVisible(true);
+        }
     }//GEN-LAST:event_rsalgActionPerformed
 
     private void rguaravitasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rguaravitasActionPerformed
@@ -591,37 +596,35 @@ public class EstoqueLancho extends javax.swing.JFrame {
         int j = Integer.parseInt(qguaesto.getText());
         int u = j - 1;
         qguaesto.setText(Integer.toString(u));
-        if( u == 0){
-        alter1.setVisible(true);
-}      
+        if (u == 0) {
+            alter1.setVisible(true);
+        }
 
     }//GEN-LAST:event_rguaravitasActionPerformed
 
     private void confirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmActionPerformed
         // TODO add your handling code here:
-        
+
         String valor = txtValor.getText().replace(",", ".");
         double c = Double.parseDouble(valor);
-        
+
         int d = Integer.parseInt(ltotal.getText());
         double e = c + d;
         ltotal.setText(Double.toString(e));
-        
-       
-                
-        String paga = pagamento.getText().replace(",",".");
+
+        String paga = pagamento.getText().replace(",", ".");
         double g = Double.parseDouble(paga);
-       
+
         double f = g - c;
-        troco.setText(Double.toString(f));    
-        
-         int k = Integer.parseInt(qsalgesto.getText().toString());
-         int p = k - 1;
-         qsalgesto.setText(Integer.toString(p));
-         
-         int y = Integer.parseInt(qguaesto.getText().toString());
-         int u = y - 1;
-         qguaesto.setText(Integer.toString(u));
+        troco.setText(Double.toString(f));
+
+        int k = Integer.parseInt(qsalgesto.getText().toString());
+        int p = k - 1;
+        qsalgesto.setText(Integer.toString(p));
+
+        int y = Integer.parseInt(qguaesto.getText().toString());
+        int u = y - 1;
+        qguaesto.setText(Integer.toString(u));
     }//GEN-LAST:event_confirmActionPerformed
 
     private void ltotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ltotalActionPerformed
@@ -631,9 +634,9 @@ public class EstoqueLancho extends javax.swing.JFrame {
     private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
         // TODO add your handling code here:
         txtValor.setText("0");
-        pagamento.setText(""); 
+        pagamento.setText("");
         troco.setText("0");
-        
+
     }//GEN-LAST:event_resetActionPerformed
 
     private void salgGuaraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salgGuaraActionPerformed
@@ -647,9 +650,9 @@ public class EstoqueLancho extends javax.swing.JFrame {
         int k = j - 1;
         qsalgesto.setText(Integer.toString(i));
         qguaesto.setText(Integer.toString(k));
-        if( i == 0 || k == 0){
-        alter1.setVisible(true);
-}
+        if (i == 0 || k == 0) {
+            alter1.setVisible(true);
+        }
     }//GEN-LAST:event_salgGuaraActionPerformed
 
     private void pagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pagamentoActionPerformed
@@ -680,6 +683,10 @@ public class EstoqueLancho extends javax.swing.JFrame {
     private void qsalgestoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qsalgestoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_qsalgestoActionPerformed
+
+    private void trocoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_trocoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_trocoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -762,5 +769,4 @@ public class EstoqueLancho extends javax.swing.JFrame {
     private javax.swing.JButton vendedor;
     // End of variables declaration//GEN-END:variables
 
-  
 }
